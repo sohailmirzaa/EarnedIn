@@ -1,0 +1,36 @@
+  <img
+      class="company2 press-logo"
+      src="/public/Images/clipart2553733.png"
+      alt=""
+    />
+      <img
+      class="company2 press-logo hover"
+      src="/public/Images/facebook.jpeg"
+      alt=""
+    />
+        <img
+      class="company1 press-logo"
+      src="/public/Images/UPS_logo_PNG1.png"
+      alt=""
+    />
+        <img
+      class="company1 press-logo"
+      src="/public/Images/Amazon_logo_PNG5.png"
+      alt=""
+    />
+       <img
+      class="company3 press-logo"
+      src="/public/Images/Linkedin_logo_PNG4.png"
+      alt=""
+    />
+          <img
+      class="apple press-logo"
+      src="/public/Images/Apple_logo_PNG4.png"
+      alt=""
+    />
+       <i style="font-size: x-large;"class="fab fa-google"></i>
+             <img
+      class="instagram press-logo"
+      src="/public/Images/Instagram_logo_PNG8.png"
+      alt=""
+    />

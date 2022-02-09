@@ -1,0 +1,92 @@
+body {
+  background-color: #2c3333;
+}
+
+h1 {
+  margin: 5%;
+  text-align: center;
+}
+.navbar {
+  padding: 4%;
+  margin: 3%;
+  border-radius: 10px 20px 10px 20px;
+}
+.testamonials {
+  margin: 0px 100px 0px 100px;
+}
+.company1 {
+  margin: 2%;
+  height: 110px;
+  width: 100px;
+}
+.company3 {
+  margin: 2%;
+  height: 110px;
+  width: 130px;
+}
+.apple {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  height: 70px;
+  width: 120px;
+}
+.company2 {
+  margin: 2%;
+  height: 60px;
+  width: 150px;
+}
+
+.companyLogos {
+  padding: 6%;
+  margin-bottom: 100px;
+}
+.instagram {
+  margin: 2%;
+  height: 70px;
+  width: 70px;
+}
+.container {
+  color: white;
+  font-family: monospace;
+}
+.logos {
+  margin-left: 60px;
+
+}
+
+.homePage {
+  color: white;
+}
+
+.register {
+  margin-top: 60px;
+  color: white;
+  margin-right: 700px;
+  font-family: monospace;
+}
+.regPng {
+  position: absolute;
+  margin-left: 500px;
+
+  padding: 1%;
+  height: 350px;
+  width: 300px;
+}
+.workImage {
+  height: 350px;
+  width: 350px;
+  margin-left: 60px;
+  margin-bottom: 70px;
+  margin-top: 10px;
+}
+.paraHome {
+  float: right;
+  margin-right: 300px;
+  margin-top: 40px;
+}
+.footer {
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  position: relative;
+}

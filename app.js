@@ -24,19 +24,31 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-mongoose.connect("mongodb://localhost:27017/EarnedIn", {
-  useNewUrlParser: true,
-});
+//EarnedIn
+mongoose.connect(
+  "mongodb+srv://sohailmirza:devilm53@cluster0.0bhsp.mongodb.net/EarnedIn",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 const userSchema = new mongoose.Schema({
   email: String,
   password: String,
 });
+const jobSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  duration:String,
+  wages:String,
+  place:String,
+});
+// const searchedItems;
 
 userSchema.plugin(passportLocalMongoose);
 
 const User = new mongoose.model("User", userSchema);
+const Job = new mongoose.model("Job", jobSchema);
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -45,11 +57,36 @@ app.get("/", (req, res) => {
   res.render("Home");
 });
 
+app.post("/", (req, res) => {
+   const searchItemEjs=req.body.searchItem;
+    console.log(searchItemEjs);
+    Job.findOne({ "title": {searchItemEjs} }, function (err, searchItem) {
+      console.log(searchItem);
+      res.redirect("/jobs");
+    });
+});
+
 app.get("/login", (req, res) => {
   res.render("Login");
 });
 app.get("/register", (req, res) => {
   res.render("Register");
+});
+app.get("/jobs", (req, res) => {
+     Job.find({},function(err,jobs){
+      res.render("Jobs", {
+     
+        // title: jobData.title,
+        // description: jobData.description,
+        // location: jobData.location,
+        // duration: jobData.duration,
+        // wages: jobData.wages,
+        JobList:jobs
+      });
+      
+     })
+
+
 });
 
 app.get("/postwork", (req, res) => {
@@ -58,6 +95,19 @@ app.get("/postwork", (req, res) => {
   } else {
     res.redirect("/login");
   }
+});
+
+app.post('/postwork', (req, res) => {
+  const job = new Job({
+    title: req.body.jobtitle,
+    description: req.body.description,
+    place: req.body.location,
+    duration: req.body.duration,
+    wages: req.body.wages,
+  }); 
+  job.save()
+  res.redirect("/jobs")
+  
 });
 
 app.post("/register", (req, res) => {

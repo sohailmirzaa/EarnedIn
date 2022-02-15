@@ -1,0 +1,22 @@
+<%-include("Header") %>
+<div id="job" className="container">
+  <h1>Jobs</h1>
+  <div class="container-fluid">
+    <center>
+      <% JobList.forEach(jobs =>{ %>
+      <div class="card" style="margin: 10px; width: 600px; color: black">
+        <div class="card-body">
+          <h4><%= jobs.title %></h4>
+          <p><strong>Description :</strong><%= jobs.description %></p>
+          <p><strong>Location :</strong><%= jobs.place %></p>
+          <p><strong>Wage :</strong><%= jobs.wages %> per hour</p>
+          <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+          </div>
+          <% }) %>
+        
+      </div>
+    </center>
+  
+</div>
+<%-include("Footer") %>

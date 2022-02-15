@@ -1,6 +1,6 @@
 <%-include("Header") %>
 
-<div class="container">
+<div class="container container-sm container-fluid">
   <h2>Login</h2>
   <img
     class="regPng press-logo"
@@ -8,14 +8,14 @@
     alt="register"
     srcset=""
   />
-  <div class="register">
+  <div class="register ">
     <form action="/login" method="POST">
-      <div class="mb-1">
+      <div class="mb-1 container-sm container-fluid">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input
           name="username"
           type="email"
-          class="form-control p-2 ml-2"
+          class="form-control p-2 ml-2 container-sm container-fluid"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
         />
@@ -23,20 +23,20 @@
           We'll never share your email with anyone else.
         </div>
       </div>
-      <div class="mb-3">
+      <div class="mb-3 container-sm container-fluid">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input
           name="password"
           type="password"
-          class="form-control p-2 ml-2"
+          class="form-control p-2 ml-2 container-sm container-fluid"
           id="exampleInputPassword1"
         />
       </div>
-      <div class="mb-3 form-check">
+      <div class="m-2 mb-3 form-check container-sm container-fluid">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
-      <button type="submit" class="btn btn-primary">Login</button>
+      <button type="submit" class=" m-2 btn btn-primary">Login</button>
     </form>
   </div>
 </div>

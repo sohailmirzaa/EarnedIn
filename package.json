@@ -8,6 +8,9 @@
   },
   "author": "Sohail Mirza",
   "license": "ISC",
+     "engines": {
+       "node": "16.13.2"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "body-parser": "^1.19.1",

@@ -1,6 +1,14 @@
 <%-include("Header") %>
-<div id="job" className="container">
-  <h1>Jobs</h1>
+<div id="job" class="container">
+  <h1>Jobs</h1> 
+  <div class="container">
+    <form class="d-flex" action="/jobs" method="POST">
+        <input name="searchItem" class="form-control me-2" type="search" placeholder="search jobs" aria-label="Search">
+        <button class="btn  btn-outline-success" type="submit">Search</button>
+      
+      </form>
+  </div>
+    
   <div class="container-fluid">
     <center>
       <% JobList.forEach(jobs =>{ %>
